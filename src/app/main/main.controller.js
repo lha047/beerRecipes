@@ -8,6 +8,12 @@ export class MainController {
     this.toastr = toastr;
 
     this.activate($timeout, webDevTec);
+    this.greeting = "Hello beer folks!"
+    this.beers = [
+              {name: "Summer IPA"}, 
+              {name: "Amarilo IPA"},
+              {name: "Colombus IPA"}
+          ];
   }
 
   activate($timeout, webDevTec) {
