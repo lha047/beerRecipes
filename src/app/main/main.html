@@ -1,12 +1,22 @@
 <div layout="vertical" layout-fill>
 
   <md-content ng-controller="MainController as vm">
-    <header>
-      <acme-navbar creation-date="main.creationDate"></acme-navbar>
-    </header>
-    <h1>{{vm.greeting}}</h1> 
-    <ul>  
-        <li ng-repeat="beer in vm.beers">{{beer.name}}</li>
-    </ul>     
-  </md-content>
+  <header>
+    <acme-navbar creation-date="main.creationDate"></acme-navbar>
+  </header>
+  <h1>{{vm.greeting}}</h1> 
+  <ul>  
+    <li ng-repeat="beer in vm.beers">{{beer.name}}  </li>
+  </ul>     
+  <p>{{vm.newBeer}}</p>
+  <form name="colorForm" ng-submit="vm.addBeer(vm.newBeer)">
+    <md-input-container>
+      <label>Add beer</label>
+      <input name="favoriteColor" ng-model="vm.newBeer" required>
+      <div ng-messages="userForm.lastName.$error">
+        <div ng-message="required">This is required!</div>
+      </div>
+    </md-input-container>
+  </form>
+</md-content>
 </div>

@@ -16,6 +16,11 @@ export class MainController {
           ];
   }
 
+  addBeer(newBeer) {
+    this.beers.push({name: newBeer});
+    this.newBeer = "";
+  }
+
   activate($timeout, webDevTec) {
     this.getWebDevTec(webDevTec);
     $timeout(() => {
