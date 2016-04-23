@@ -17,5 +17,6 @@ export function NavbarDirective() {
 class NavbarController {
   constructor (moment) {
     'ngInject';
+    this.hei = "hei";
   }
 }
