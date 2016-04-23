@@ -1,4 +1,4 @@
-export Class MaltController {
+export class MaltController {
 	constructor() {
 	
 	}

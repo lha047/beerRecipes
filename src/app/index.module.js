@@ -4,11 +4,12 @@ import { config } from './index.config';
 import { routerConfig } from './index.route';
 import { runBlock } from './index.run';
 import { MainController } from './main/main.controller';
-import { MaltController } fron '../app/components/malt/malt.controller';
+import { MaltController } from '../app/components/malt/malt.controller';
 import { GithubContributorService } from '../app/components/githubContributor/githubContributor.service';
 import { WebDevTecService } from '../app/components/webDevTec/webDevTec.service';
 import { NavbarDirective } from '../app/components/navbar/navbar.directive';
 import { MalarkeyDirective } from '../app/components/malarkey/malarkey.directive';
+import { MaltDirective } from '../app/components/malt/malt.directive';
 
 angular.module('myBeerRecipes', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ngAria', 'ngResource', 'ui.router', 'ngMaterial', 'toastr'])
   .constant('malarkey', malarkey)
@@ -21,4 +22,5 @@ angular.module('myBeerRecipes', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitiz
   .controller('MainController', MainController)
   .controller('MaltController', MaltController)
   .directive('acmeNavbar', NavbarDirective)
-  .directive('acmeMalarkey', MalarkeyDirective);
+  .directive('acmeMalarkey', MalarkeyDirective)
+  .directive('malt', MaltDirective);
